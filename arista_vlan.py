@@ -24,7 +24,7 @@ def configure_vlan(host, vlan_id, vlan_name=None):
     return host.config(cmd)
 
 
-def main()
+def handler()
     host = pyeapi.connect_to('"pynet-sw2"')
     '''
     sys.argv[1] takes the first possition of the value being pass.
@@ -54,6 +54,6 @@ def main()
                 host.config([command_str])
             else:
                 print "VLAN does not exist, no action required"                
-
-main()
+if __name == '__main__':
+	handler()
 
